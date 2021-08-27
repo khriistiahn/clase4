@@ -28,14 +28,17 @@ export class HomePage {
     laedad : new FormControl('')
   });
 
+  //creacion d arreglo que contiene el listado de "personas"
+  lista_personas = new Array();
 
   //metodo de acceso
   cambiarDatos(){
-    alert('pincho boton'+this.rut);
+    console.log(this.lista_personas);
   }
 
   enviar(){
-    console.log(this.persona);
+    console.log(this.persona.value);
+    this.lista_personas.push(this.persona);
   }
 
 }
